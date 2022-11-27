@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 import { RainbowKitProvider, getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { ChakraProvider } from '@chakra-ui/react'
 import { publicProvider } from 'wagmi/providers/public';
 import * as React from 'react'
 import { extendTheme } from '@chakra-ui/react'
@@ -17,7 +18,6 @@ const theme = extendTheme({
 })
 
 
-import { ChakraProvider } from '@chakra-ui/react'
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
@@ -32,11 +32,9 @@ const { chains, provider, webSocketProvider } = configureChains(
   ],
   [
     alchemyProvider({
-      // This is Alchemy's default API key.
-      // You can get your own at https://dashboard.alchemyapi.io
-      alchemyId: 'Da-2Ot_PmvmISYkxe74ryRO_uQ8fo6VJ',
+      alchemyId: '5VB-tOXGMWwNqnOBD585xxNZ2MYpNJzL',
     }),
-    publicProvider(),
+    // publicProvider(),
   ]
 );
 

@@ -25,7 +25,7 @@ const NFTCard = ({ ethAddress }: Props) => {
 
                 <Box></Box>
               </AspectRatio>
-              <Text fontSize="xs" mt="10px">
+              <Text fontSize="xs" mt="10px" textAlign="center">
                 {data.name}
               </Text>
 
